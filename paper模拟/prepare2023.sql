@@ -1,19 +1,21 @@
+drop database if exists test2023;
+create database if not exists test2023;
 use test2023;
-drop table student;
-create table student
+drop table if exists student;
+create table if not exists student
 (s_id int primary key comment '学号',
  s_name varchar(20) not null comment '姓名',
  sex enum('0','1') not null comment '性别'
 );
 
-drop table course;
-create table course
+drop table if exists course;
+create table if not exists course
 (c_id int primary key comment '课程编号',
  c_name char(20) not null comment '课程名称'
 );
 
-drop table score;
-create table score
+drop table if exists score;
+create table if not exists score
 (s_id int not null comment '学号',
  c_id int not null comment '课程编号',
  score1 int comment '成绩1',
